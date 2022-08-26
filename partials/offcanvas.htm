@@ -1,0 +1,56 @@
+<div class="container-fluid offcanvas offcanvas-end" id="offcanvas">
+    <div class="container-lg">
+        <div class="row mt-4">
+            <div class="col-8 offset-2 text-center logo">
+                <a href="{{ 'homepage'|page }}">
+                    <img src="{{ 'assets/images/logo-offcanvas.svg'|theme }}" alt="Stylové pánské holičství v Trutnově"
+                         class="img-fluid">
+                </a>
+            </div>
+
+            <div class="col-2 d-flex align-items-center justify-content-end">
+                <button type="button" data-bs-dismiss="offcanvas" class="close bg-black d-block"></button>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-4">
+            <nav class="nav nav-pills flex-column pe-0 gap-4">
+                <li class="nav-item">
+                    <a href="{{ 'homepage'|page }}/#sluzby" class="nav-link text-uppercase text-black fss-24 ff-oswald fw-medium text-center">
+                        služby
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ 'homepage'|page }}/#klienti" class="nav-link text-uppercase text-black fss-24 ff-oswald fw-medium text-center">
+                        klienti
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ 'homepage'|page }}/#kontakty" class="nav-link text-uppercase text-black fss-24 ff-oswald fw-medium text-center">
+                        kontakty
+                    </a>
+                </li>
+
+                <li class="nav-item mt-2">
+                    <a href="tel:{{ this.theme.phone }}" class="btn btn-black w-100 d-flex align-items-center justify-content-center">
+                        <span class="phone bg-white me-2"></span> {{ this.theme.phone }}
+                    </a>
+                </li>
+            </nav>
+        </div>
+
+        <div class="mt-5">
+            <p class="text-center fs-12 mb-2">
+                Sleduj nás
+            </p>
+
+            <p class="mb-0 socials text-center">
+                <a href="{{ this.theme.facebook }}" target="_blank" class="fb bg-black d-inline-block mx-1"></a>
+
+                <a href="{{ this.theme.instagram }}" target="_blank" class="ig bg-black d-inline-block mx-1"></a>
+            </p>
+        </div>
+    </div>
+</div>

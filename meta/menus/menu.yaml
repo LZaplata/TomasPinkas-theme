@@ -1,0 +1,60 @@
+items:
+    -
+        title: Projects
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: projects
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Prints
+        type: cms-page
+        code: ''
+        reference: prints
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Infographics
+        type: cms-page
+        code: ''
+        reference: infographics
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Text
+        type: cms-page
+        code: ''
+        reference: text
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Download
+        type: cms-page
+        code: ''
+        reference: download
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: About
+        type: cms-page
+        code: ''
+        reference: about
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Menu

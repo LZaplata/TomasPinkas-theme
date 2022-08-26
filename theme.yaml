@@ -1,0 +1,13 @@
+name: "Tomáš Pinkas"
+description: 'Theme for graphic designer from Trutnov.'
+author: 'Lukáš Záplata'
+homepage: ''
+authorCode: LZaplata
+code: tomaspinkas
+parent: ''
+database: '0'
+require:
+    - initbiz.seostorm
+    - rainlab.blog
+    - rainlab.pages
+    - lzaplata.extensions

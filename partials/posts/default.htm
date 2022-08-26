@@ -1,0 +1,13 @@
+{% set posts = __SELF__.posts %}
+
+{% for post in posts %}
+    <div class="post col">
+        <p class="date ff-roboto fs-16 fw-regular text-gray mb-3">
+            {{ post.publish_at|date("j/n/Y") }}
+        </p>
+
+        <h2 class="h1">
+            {{ post.title }}
+        </h2>
+    </div>
+{% endfor %}

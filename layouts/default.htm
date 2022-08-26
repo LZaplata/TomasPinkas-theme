@@ -1,0 +1,49 @@
+[staticMenu menu]
+code = "menu"
+==
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {% component "seo" %}
+
+        <link rel="stylesheet" href="{{ [
+            'assets/css/theme.css',
+            'assets/css/bootstrap-icons.css',
+            'assets/css/lightgallery.css',
+            'assets/css/lg-zoom.css',
+            'assets/css/lg-thumbnail.css',
+        ]|theme }}" />
+
+        <link rel="stylesheet" href="https://use.typekit.net/vcm5kdr.css">
+    </head>
+
+    <body class="position-relative">
+        {% component "menu" %}
+
+        <main class="container-fluid px-0">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2">
+                        {% page %}
+                    </div>
+                </div>
+            </div>
+        </main>
+
+{#        {% partial "offcanvas" %}#}
+
+        <script src="{{ [
+            'assets/js/jquery.min.js',
+            'assets/js/popper.js',
+            'assets/js/bootstrap.js',
+            'assets/js/lightgallery.min.js',
+            'assets/js/lg-zoom.min.js',
+            'assets/js/lg-thumbnail.min.js',
+            'assets/js/theme.js',
+        ]|theme }}"></script>
+    </body>
+</html>
