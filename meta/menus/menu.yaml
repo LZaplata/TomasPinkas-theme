@@ -1,11 +1,20 @@
 items:
     -
         title: Projects
+        type: cms-page
+        code: projects
+        reference: projects
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Prints
         nesting: null
         type: cms-page
         url: null
         code: ''
-        reference: projects
+        reference: prints
         cmsPage: null
         replace: null
         viewBag:
@@ -13,46 +22,53 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Prints
-        type: cms-page
-        code: ''
-        reference: prints
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
         title: Infographics
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: infographics
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Text
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: text
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Download
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: download
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: About
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: about
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

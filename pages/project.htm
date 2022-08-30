@@ -1,0 +1,20 @@
+url = "/project/:slug"
+layout = "default"
+title = "Project"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "projects"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "projects";
+}
+?>
+==
+<div class="post-back position-absolute start-0 top-0">
+    <a href="{{ "projects"|page }}" class="d-block bg-black-light bg-red-hover transition"></a>
+</div>
+
+{% component "post" %}

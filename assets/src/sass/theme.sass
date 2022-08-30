@@ -4,10 +4,23 @@ body
     margin: 68px !important
     height: calc(100% - (68px * 2))
 
-.posts
-    .post
-        .date
-            letter-spacing: 1px
+.post
+    .date
+        letter-spacing: 1px
 
-        h2
-            line-height: 51px
+    .content
+        a
+            font-weight: map-get($font-weights, "semibold")
+            color: var(--bs-black-light)
+            transition: $transition-base
+
+            &:hover
+                color: var(--bs-red)
+
+    &-back
+        a
+            mask-image: url("../images/icons/arrow-left-circle.svg")
+            width: 45px
+            height: 45px
+            mask-size: cover
+            -webkit-mask-size: cover

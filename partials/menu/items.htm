@@ -2,7 +2,7 @@
     {% if not item.viewBag.isHidden %}
         <li class="nav-item {{ item.viewBag.cssClass }}">
             {% if item.url %}
-                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link text-uppercase {{ item.isActive ? 'active text-gray' : '' }} {{ item.isChildActive ? 'child-active' : '' }}">
+                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link text-uppercase fstr-120 lh-45 {{ item.isActive ? 'active text-gray' : '' }} {{ item.isChildActive ? 'child-active' : '' }}">
                     {{ item.title }}
                 </a>
             {% else %}

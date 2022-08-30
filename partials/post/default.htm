@@ -1,0 +1,19 @@
+{% set post = __SELF__.post %}
+
+<div class="post">
+    <p class="date ff-roboto fs-15 fw-regular text-gray mb-1">
+        {{ post.publish_at|date("j/n/Y") }}
+    </p>
+
+    <h1 class="text-uppercase mb-2 lh-51">
+        {{ post.title }}
+    </h1>
+
+    <p class="ff-roboto fs-18 mb-3 pb-3 border-bottom border-2 border-gray-light lh-29">
+        {{ post.excerpt|raw }}
+    </p>
+
+    <div class="content fstr-110 lh-26">
+        {{ post.content|raw }}
+    </div>
+</div>

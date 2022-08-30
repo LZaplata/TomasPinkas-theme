@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@110,268;110,600&family=Roboto+Mono:ital,wght@0,400;1,500&family=Syne:wght@620&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@110,268;110,600;120,400&family=Roboto+Mono:ital,wght@0,400;1,500&display=swap');
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "~bootstrap/scss/functions";
@@ -27,14 +27,24 @@ $font-weights: (
     "regular":                  400,
     "medium":                   500,
     "semibold":                 600,
-    "semibold-syne":            620,
     "bold":                     700,
     "heavy":                    900,
 );
 
+$font-stretches: (
+    110:                        110%,
+    120:                        120%,
+);
+
+$line-heights: (
+    26:                         1.625rem,
+    29:                         1.8125rem,
+    45:                         2.8125rem,
+    51:                         3.1875rem,
+);
+
 $font-family-archivo:           "Archivo", sans-serif;
 $font-family-roboto:            "Roboto Mono", monospace;
-$font-family-syne:              "Syne", sans-serif;
 $font-family-korolev:           "korolev-rounded", sans-serif;
 $font-family-base:              $font-family-archivo;
 $font-size-base:                map-get($font-sizes, 15);
@@ -49,23 +59,24 @@ $h1-font-size:                  map-get($font-sizes, 46);
 
 $body-color:                    map-get($theme-colors, "black-light");
 
-//$btn-font-size:                 map-get($font-sizes, 17);
-//$btn-border-radius:             0;
-//$btn-font-weight:               map-get($font-weights, "semibold");
-//$btn-focus-width:               0;
-//$btn-border-width:              1px;
-//$btn-padding-x:                 3.9rem;
-//$btn-padding-y:                 1rem;
-//
-//$btn-close-focus-shadow:        none;
+$btn-font-size:                 map-get($font-sizes, 19);
+$btn-font-weight:               map-get($font-weights, "regular");
+$btn-font-family:               $font-family-roboto;
+$btn-focus-width:               0;
+$btn-border-radius:             3rem;
+$btn-border-width:              1px;
+$btn-padding-x:                 3.9rem;
+$btn-padding-y:                 1rem;
+
+$btn-close-focus-shadow:        none;
 
 $nav-link-color:                map-get($theme-colors, "black-light");
 $nav-link-hover-color:          map-get($theme-colors, "red");
 $nav-link-font-size:            map-get($font-sizes, 16);
-$nav-link-font-weight:          map-get($font-weights, "semibold-syne");
+$nav-link-font-weight:          map-get($font-weights, "regular");
 $nav-link-padding-x:            0;
-//$nav-link-padding-y:            0;
-//
+$nav-link-padding-y:            0;
+
 //$offcanvas-bg-color:            map-get($theme-colors, "white");
 //$offcanvas-color:               map-get($theme-colors, "black");
 
@@ -97,9 +108,18 @@ $utilities:
         values: (
             "archivo": $font-family-archivo,
             "roboto": $font-family-roboto,
-            "syne": $font-family-syne,
             "korolev": $font-family-korolev,
         ),
+    ),
+    "font-stretch": (
+        property: font-stretch,
+        class: fstr,
+        values: $font-stretches,
+    ),
+    "line-height": (
+        property: line-height,
+        class: lh,
+        values: $line-heights,
     ),
     "background-color-hover": (
         property: background-color,

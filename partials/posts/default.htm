@@ -2,12 +2,16 @@
 
 {% for post in posts %}
     <div class="post col">
-        <p class="date ff-roboto fs-16 fw-regular text-gray mb-3">
-            {{ post.publish_at|date("j/n/Y") }}
-        </p>
+        <div class="{% if not loop.first %}border-top border-1 border-black-light mt-4 pt-4{% endif %}">
+            <p class="date ff-roboto fs-15 fw-regular text-gray mb-1">
+                {{ post.publish_at|date("j/n/Y") }}
+            </p>
 
-        <h2 class="h1">
-            {{ post.title }}
-        </h2>
+            <h2 class="h1 mb-0 text-uppercase lh-51">
+                <a href="{{ post.url }}" class="text-decoration-none text-black-light text-red-hover transition">
+                    {{ post.title }}
+                </a>
+            </h2>
+        </div>
     </div>
 {% endfor %}
