@@ -22,10 +22,30 @@ code = "menu"
     </head>
 
     <body class="position-relative">
-        {% component "menu" %}
+        <div class="offcanvas-xl offcanvas-end" id="menu">
+            <div class="position-absolute end-0 top-0 d-xl-none m-4">
+                <a href="#menu" data-bs-dismiss="offcanvas">
+                    <img src="{{ 'assets/images/icons/arrow-left-circle.svg'|theme }}" alt="menu">
+                </a>
+            </div>
+
+            {% component "menu" %}
+
+            <div class="position-absolute end-0 bottom-0 d-xl-none">
+                <a href="{{ 'homepage'|page }}">
+                    <img src="{{ 'assets/images/logo.svg'|theme }}" alt="logo">
+                </a>
+            </div>
+        </div>
+
+        <div class="menu-toggle container position-absolute end-0 top-0 d-xl-none text-end">
+            <a href="#menu" data-bs-toggle="offcanvas">
+                <img src="{{ 'assets/images/icons/arrow-left-circle.svg'|theme }}" alt="menu">
+            </a>
+        </div>
 
         <main class="container-fluid px-0">
-            <div class="container-lg">
+            <div class="container">
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2">
                         {% page %}
@@ -34,7 +54,9 @@ code = "menu"
             </div>
         </main>
 
-{#        {% partial "offcanvas" %}#}
+        <div class="logo d-none d-xl-block position-absolute end-0 bottom-0">
+            <a href="{{ 'homepage'|page }}" class="d-block bg-black-light bg-red-hover transition"></a>
+        </div>
 
         <script src="{{ [
             'assets/js/jquery.min.js',

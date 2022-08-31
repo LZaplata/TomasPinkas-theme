@@ -1,10 +1,23 @@
 @import "custom"
 
 body
-    margin: 68px !important
-    height: calc(100% - (68px * 2))
+    margin-top: 68px
+
+    @include media-breakpoint-up(xl)
+        margin: 68px
+        height: calc(100% - (2 * 68px))
+
+.nav
+    padding-left: 68px
+
+.menu-toggle
+    transform: translateY(-100%)
+    padding-bottom: calc((68px - 45px) / 2)
 
 .post
+    @include media-breakpoint-down(xl)
+        position: relative
+
     .date
         letter-spacing: 1px
 
@@ -18,9 +31,30 @@ body
                 color: var(--bs-red)
 
     &-back
+        @include media-breakpoint-down(xl)
+            transform: translateY(-100%)
+            padding-bottom: calc((68px - 45px) / 2)
+
         a
             mask-image: url("../images/icons/arrow-left-circle.svg")
             width: 45px
             height: 45px
             mask-size: cover
             -webkit-mask-size: cover
+
+    & > div
+        &:hover
+            .h1
+                a
+                    color: var(--bs-red) !important
+
+.logo
+    margin-right: -68px
+    margin-bottom: -68px
+
+    a
+        mask-image: url("../images/logo.svg")
+        width: 191px
+        height: 78px
+        mask-size: cover
+        -webkit-mask-size: cover

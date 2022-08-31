@@ -2,16 +2,24 @@
 
 {% for post in posts %}
     <div class="post col">
-        <div class="{% if not loop.first %}border-top border-2 border-gray-light mt-4 pt-4{% endif %}">
+        <div class="{% if not loop.first %}border-top border-2 border-gray-lightK mt-4 pt-4{% endif %}">
             <p class="date ff-roboto fs-15 fw-regular text-gray mb-1">
                 {{ post.publish_at|date("j/n/Y") }}
             </p>
 
             <h2 class="h1 mb-0 text-uppercase lh-51">
-                <a href="{{ post.url }}" class="text-decoration-none text-black-light text-red-hover transition">
+                <a href="{{ post.url }}" class="text-decoration-none text-black-light transition">
                     {{ post.title }}
                 </a>
             </h2>
+
+            <p class="img mb-0 mt-3">
+                {% set image = post.featured_images.first %}
+
+                <a href="{{ post.url }}">
+                    <img src="{{ image.thumb(900, 504, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
+                </a>
+            </p>
         </div>
     </div>
 {% endfor %}
