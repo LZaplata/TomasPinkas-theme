@@ -7,8 +7,15 @@ body
         margin: 68px
         height: calc(100% - (2 * 68px))
 
+//h1, .h1
+    @include media-breakpoint-only(xs)
+        font-size: 40px
+
 .nav
-    padding-left: 68px
+    padding-left: map-get($spacers, 4)
+
+    @include media-breakpoint-up(xl)
+        padding-left: 68px
 
 .menu-toggle
     transform: translateY(-100%)
@@ -30,10 +37,18 @@ body
             &:hover
                 color: var(--bs-red)
 
+        h2
+            text-transform: uppercase
+
     &-back
         @include media-breakpoint-down(xl)
             transform: translateY(-100%)
             padding-bottom: calc((68px - 45px) / 2)
+
+        @include media-breakpoint-up(xl)
+            position: fixed !important
+            top: 68px !important
+            left: 68px !important
 
         a
             mask-image: url("../images/icons/arrow-left-circle.svg")
@@ -49,9 +64,6 @@ body
                     color: var(--bs-red) !important
 
 .logo
-    margin-right: -68px
-    margin-bottom: -68px
-
     a
         mask-image: url("../images/logo.svg")
         width: 191px

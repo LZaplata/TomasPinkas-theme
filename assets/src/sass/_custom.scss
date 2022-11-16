@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@110,268;110,600;120,400&family=Roboto+Mono:ital,wght@0,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2family=Roboto+Mono:ital,wght@0,400;1,500&display=swap');
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
+$rfs-base-value:                20rem;
+
 $theme-colors: (
     "black":                    #000000,
     "white":                    #ffffff,
@@ -17,23 +19,18 @@ $theme-colors: (
 $font-sizes: (
     15:                         0.9375rem,
     16:                         1rem,
+    17:                         1.0625rem,
     18:                         1.125rem,
     21:                         1.3125rem,
     46:                         2.875rem,
 );
 
 $font-weights: (
-    "light":                    268,
     "regular":                  400,
     "medium":                   500,
     "semibold":                 600,
     "bold":                     700,
     "heavy":                    900,
-);
-
-$font-stretches: (
-    110:                        110%,
-    120:                        120%,
 );
 
 $line-heights: (
@@ -43,10 +40,9 @@ $line-heights: (
     51:                         3.1875rem,
 );
 
-$font-family-archivo:           "Archivo", sans-serif;
 $font-family-roboto:            "Roboto Mono", monospace;
 $font-family-korolev:           "korolev-rounded", sans-serif;
-$font-family-base:              $font-family-archivo;
+$font-family-base:              $font-family-roboto;
 $font-size-base:                map-get($font-sizes, 15);
 $font-weight-base:              map-get($font-weights, "light");
 $font-weight-bold:              map-get($font-weights, "semibold");
@@ -72,8 +68,8 @@ $btn-close-focus-shadow:        none;
 
 $nav-link-color:                map-get($theme-colors, "black-light");
 $nav-link-hover-color:          map-get($theme-colors, "red");
-$nav-link-font-size:            map-get($font-sizes, 16);
-$nav-link-font-weight:          map-get($font-weights, "regular");
+$nav-link-font-size:            map-get($font-sizes, 21);
+$nav-link-font-weight:          map-get($font-weights, "bold");
 $nav-link-padding-x:            0;
 $nav-link-padding-y:            0;
 
@@ -106,15 +102,9 @@ $utilities:
         property: font-family,
         class: ff,
         values: (
-            "archivo": $font-family-archivo,
             "roboto": $font-family-roboto,
             "korolev": $font-family-korolev,
         ),
-    ),
-    "font-stretch": (
-        property: font-stretch,
-        class: fstr,
-        values: $font-stretches,
     ),
     "line-height": (
         property: line-height,
