@@ -1,4 +1,16 @@
 title = "Infographics"
 layout = "default"
 url = "/infographics"
+
+[blogPosts posts]
+pageNumber = "{{ :page }}"
+categoryFilter = "infographics"
+postsPerPage = 10
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "infographics"
+postPage = "infographic"
 ==
+<div class="posts row row-cols-1">
+    {% component "posts" %}
+</div>
