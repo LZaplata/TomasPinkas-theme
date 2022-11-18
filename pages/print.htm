@@ -1,0 +1,16 @@
+url = "/print/:slug"
+layout = "default"
+title = "Print"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "prints"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "prints";
+}
+?>
+==
+{% component "post" categoryPage=prints %}
