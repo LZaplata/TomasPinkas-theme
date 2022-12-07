@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2family=Roboto+Mono:ital,wght@0,400;1,500&display=swap');
 
+@font-face {
+    font-family: "Korolev Rounded";
+    src: url("../fonts/KorolevRounded-HeavyItalic.eot");
+    src: url("../fonts/KorolevRounded-HeavyItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/KorolevRounded-HeavyItalic.woff2") format("woff2"),
+    url("../fonts/KorolevRounded-HeavyItalic.woff") format("woff"),
+    url("../fonts/KorolevRounded-HeavyItalic.ttf") format("truetype"),
+    url("../fonts/KorolevRounded-HeavyItalic.svg#KorolevRounded-HeavyItalic") format("svg");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Korolev Rounded";
+    src: url("../fonts/KorolevRounded-BoldItalic.eot");
+    src: url("../fonts/KorolevRounded-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/KorolevRounded-BoldItalic.woff2") format("woff2"),
+    url("../fonts/KorolevRounded-BoldItalic.woff") format("woff"),
+    url("../fonts/KorolevRounded-BoldItalic.ttf") format("truetype"),
+    url("../fonts/KorolevRounded-BoldItalic.svg#KorolevRounded-BoldItalic") format("svg");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "~bootstrap/scss/functions";
 
@@ -41,7 +67,7 @@ $line-heights: (
 );
 
 $font-family-roboto:            "Roboto Mono", monospace;
-$font-family-korolev:           "korolev-rounded", sans-serif;
+$font-family-korolev:           "Korolev Rounded", sans-serif;
 $font-family-base:              $font-family-roboto;
 $font-size-base:                map-get($font-sizes, 15);
 $font-weight-base:              map-get($font-weights, "light");

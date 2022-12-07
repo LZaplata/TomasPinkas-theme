@@ -13,7 +13,7 @@ items:
         nesting: null
         type: cms-page
         url: null
-        code: ''
+        code: prints
         reference: prints
         cmsPage: null
         replace: null

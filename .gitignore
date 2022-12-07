@@ -1,5 +1,6 @@
 node_modules
 assets/css
-assets/fonts
+assets/fonts/*
+!assets/fonts/Korolev*
 assets/js
 .themelock
