@@ -27,9 +27,6 @@ body
     padding-bottom: calc((68px - 45px) / 2)
 
 .post
-    @include media-breakpoint-down(xl)
-        position: relative
-
     .date
         letter-spacing: 1px
 
@@ -64,6 +61,8 @@ body
                     margin-top: 5px
 
     &-back
+        margin-right: 69px
+
         @include media-breakpoint-down(xl)
             transform: translateY(-100%)
             padding-bottom: calc((68px - 45px) / 2)
