@@ -1,0 +1,16 @@
+title = "Blog-detail"
+layout = "default"
+url = "/blog/:slug"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "blog"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "blog";
+}
+?>
+==
+{% component "post" %}

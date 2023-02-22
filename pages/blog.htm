@@ -1,15 +1,15 @@
-title = "Prints"
+url = "/blog"
 layout = "default"
-url = "/prints"
+title = "Blog"
 
 [blogPosts posts]
 pageNumber = "{{ :page }}"
-categoryFilter = "prints"
+categoryFilter = "blog"
 postsPerPage = 10
 noPostsMessage = "Nenalezeny žádné příspěvky"
 sortOrder = "published_at desc"
-categoryPage = "prints"
-postPage = "print"
+categoryPage = "blog"
+postPage = "blog-detail"
 ==
 <div class="posts row row-cols-1">
     {% component "posts" %}

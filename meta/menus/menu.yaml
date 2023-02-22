@@ -1,20 +1,24 @@
 items:
     -
-        title: Projects
+        title: Commercial
+        nesting: null
         type: cms-page
-        code: projects
-        reference: projects
+        url: null
+        code: ''
+        reference: commercial
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: Prints
+        title: Personal
         nesting: null
         type: cms-page
         url: null
-        code: prints
-        reference: prints
+        code: ''
+        reference: personal
         cmsPage: null
         replace: null
         viewBag:
@@ -35,25 +39,21 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Text
-        nesting: null
+        title: Download
         type: cms-page
-        url: null
         code: ''
-        reference: text
-        cmsPage: null
-        replace: null
+        reference: download
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: Download
+        title: Blog
         nesting: null
         type: cms-page
         url: null
         code: ''
-        reference: download
+        reference: blog
         cmsPage: null
         replace: null
         viewBag:

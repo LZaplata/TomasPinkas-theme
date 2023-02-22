@@ -1,0 +1,16 @@
+url = "/t-shirts/:slug"
+layout = "default"
+title = "T-shirts-detail"
+
+[blogPost posts]
+slug = "{{ :slug }}"
+categoryPage = "t-shirts"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "t-shirts";
+}
+?>
+==
+{% component "post" %}

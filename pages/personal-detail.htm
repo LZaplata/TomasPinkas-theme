@@ -1,0 +1,16 @@
+title = "Personal-detail"
+layout = "default"
+url = "/personal/:slug"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "personal"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "personal";
+}
+?>
+==
+{% component "post" %}

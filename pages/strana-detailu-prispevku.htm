@@ -1,0 +1,16 @@
+url = "/commercial/:slug"
+layout = "default"
+title = "Commercial-detail"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "commercial"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "commercial";
+}
+?>
+==
+{% component "post" %}

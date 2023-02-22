@@ -1,15 +1,15 @@
-url = "/"
+url = "/personal"
 layout = "default"
-title = "Projects"
+title = "Personal"
 
 [blogPosts posts]
 pageNumber = "{{ :page }}"
-categoryFilter = "projects"
+categoryFilter = "personal"
 postsPerPage = 10
 noPostsMessage = "Nenalezeny žádné příspěvky"
 sortOrder = "published_at desc"
-categoryPage = "projects"
-postPage = "project"
+categoryPage = "personal"
+postPage = "personal-detail"
 ==
 <div class="posts row row-cols-1">
     {% component "posts" %}

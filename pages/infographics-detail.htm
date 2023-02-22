@@ -1,0 +1,16 @@
+title = "Infographics-detail"
+layout = "default"
+url = "/infographics/:slug"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "infographics"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "infographics";
+}
+?>
+==
+{% component "post" %}

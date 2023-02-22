@@ -1,0 +1,16 @@
+title = "Download-detail"
+layout = "default"
+url = "/download/:slug"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "download"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "download";
+}
+?>
+==
+{% component "post" %}
