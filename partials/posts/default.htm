@@ -4,7 +4,7 @@
     <div class="post col">
         <div class="{% if not loop.first %}border-top border-1 border-gray-light mt-4 pt-4{% endif %}">
             <p class="date ff-roboto fs-15 fw-regular text-gray mb-1">
-                {{ post.publish_at|date("j/n/Y") }}
+                {{ post.published_at|date("j/n/Y") }}
             </p>
 
             <h2 class="h1 mb-0 text-uppercase lh-51 fst-italic">
