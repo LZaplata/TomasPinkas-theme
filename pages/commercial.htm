@@ -5,12 +5,26 @@ title = "Commercial"
 [blogPosts posts]
 pageNumber = "{{ :page }}"
 categoryFilter = "commercial"
-postsPerPage = 100
+postsPerPage = 1
 noPostsMessage = "Nenalezeny žádné příspěvky"
 sortOrder = "published_at desc"
 categoryPage = "commercial"
 postPage = "strana-detailu-prispevku"
 ==
-<div class="posts row row-cols-1">
-    {% component "posts" %}
+<?php
+function onLoadMore()
+{
+    $pageNumber = Input::get("page");
+
+    $this["posts"]->setProperty("pageNumber", $pageNumber);
+    $this["posts"]->onRun();
+}
+?>
+==
+<div id="posts" class="row row-cols-1">
+    {% partial "posts/list" %}
+</div>
+
+<div id="load-more">
+    {% partial "posts/load-more" %}
 </div>

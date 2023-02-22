@@ -1,0 +1,15 @@
+{% set pageNumber = this.page.components["posts"].property("pageNumber") ?
+    this.page.components["posts"].property("pageNumber") + 1 :
+    2 %}
+
+{% if pageNumber <= this.page.components["posts"].posts.lastPage %}
+    <div class="my-5 text-center">
+        <button class="btn btn-outline-black-light"
+                data-request="onLoadMore"
+                data-request-update="'posts/list': '@#posts', 'posts/load-more': '#load-more'"
+                data-request-data="page: {{ pageNumber }}">
+
+            Zobrazit další
+        </button>
+    </div>
+{% endif %}

@@ -11,6 +11,13 @@ body
     @include media-breakpoint-only(xs)
         font-size: 40px
 
+.btn
+    &-outline-black-light
+        --bs-btn-hover-color: var(--bs-red)
+        --bs-btn-active-color: var(--bs-red)
+        --bs-btn-active-border-color: var(--bs-red)
+        --bs-btn-active-bg: transparent
+
 .nav
     padding-left: map-get($spacers, 4)
 
