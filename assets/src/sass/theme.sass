@@ -17,6 +17,11 @@ body
     @include media-breakpoint-up(xl)
         padding-left: 68px
 
+    li
+        a
+            @media (max-device-width: 926px) and (orientation: landscape)
+                line-height: map-get($line-heights, 45) !important
+
 .menu-toggle
     transform: translateY(-100%)
     padding-bottom: calc((68px - 45px) / 2)
